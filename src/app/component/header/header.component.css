@@ -1,21 +1,15 @@
+P {
+    margin: auto 0;
+    padding: 10px 0;
+}
+
 #header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
-    background-color: #54BAB9;
     padding: 20px;
-    color: white;
+    color: #54BAB9;
 }
-/* #header-right {
-    position: absolute;
-    right: 0px;
-    margin: auto 0;
-} */
-#header P {
-    margin: auto 0;
-    padding: 10px 0;
-}
-#header-right * {
-    margin: 10px;
-}
+
+#redes * { margin: 10px; }

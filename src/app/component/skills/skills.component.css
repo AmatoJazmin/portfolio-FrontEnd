@@ -1,0 +1,17 @@
+h1 { margin: 20px; }
+
+p { margin-top: 10px; }
+
+img { height: 5em; }
+
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-bottom: 5px solid #54BAB9;
+}
+
+.skill {
+    text-align: center;
+    margin: 25px;
+}

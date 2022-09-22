@@ -1,10 +1,22 @@
-#educacion > H1 {
-    margin: 20px;
-}
+h1 { margin: 20px; }
+
+p { font-style:italic ;}
+
 img {
     width: 100px;
     margin-right: 30px;
 }
+
+#educacion {
+    display: flex;
+    align-items: center;
+}
+
+img:last-child {
+    width: 300px;
+    margin-left: 100px;
+}
+
 .estudio {
     display: flex;
     align-items: center;

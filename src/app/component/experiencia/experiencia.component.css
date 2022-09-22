@@ -1,0 +1,15 @@
+h1 { margin: 20px; }
+
+p { font-style:italic ;}
+
+img { 
+    width: 300px;
+    margin: 0 100px 0 20px;}
+
+#experiencia {
+    display: flex;
+    align-items: center;
+    border-bottom: 50px solid #54BAB9;
+}
+
+.trabajo { margin: 30px; }
