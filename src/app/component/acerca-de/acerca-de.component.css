@@ -1,6 +1,6 @@
 h1 { font-size: 50px; }
 
-i { margin: 5px 10px; }
+i { margin: 10px; }
 
 #acerca-de {
     display: flex;
@@ -15,8 +15,6 @@ i { margin: 5px 10px; }
 #acerca-de > div { padding: 10px 0; }
 
 #photo {
-    border-radius: 50%;
-    border: white 1px solid;
     width: 200px;
     height: 200px;
     margin: 0 50px;
