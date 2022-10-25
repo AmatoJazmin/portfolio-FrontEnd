@@ -1,8 +1,16 @@
 * {
     margin: 0;
     font-family: 'Lora', serif;
+    box-sizing: border-box;
+    background-color: darkslategray;
+    color: white;
 }
 
-h1 {
-    font-family: 'Lato', sans-serif;
+h1 {font-family: 'Lato', sans-serif}
+
+h2 {
+    color: #54BAB9;
+    font-size: 30px
 }
+
+p {font-size: 17px}

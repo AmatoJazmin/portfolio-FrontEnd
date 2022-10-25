@@ -1,17 +1,37 @@
-h1 { margin: 20px; }
+h2 {text-align: center;
+margin-bottom: 50px;}
 
-p { margin-top: 10px; }
+p { margin: 10px}
 
-img { height: 5em; }
+img { height: 80px;}
+
+i {margin: auto 10px}
+
+#agregar {text-align: center;}
+
+#componente {
+    height: 100vh;
+    margin: 30px
+}
 
 #skills {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    border-bottom: 5px solid #54BAB9;
+    align-content: flex-start;
+    margin: auto;
+    height: 80vh;
+    width: 80%;
 }
 
 .skill {
     text-align: center;
-    margin: 25px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px white solid;
+    width: 150px;
+}
+
+.skill:hover {
+    transform: scale(1.05,1.05);
+    border: 1px coral solid;
 }

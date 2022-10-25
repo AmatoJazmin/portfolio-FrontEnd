@@ -1,30 +1,11 @@
-<h1>Estudios</h1>
 <div id="educacion">
-    <div>
-        <div class="estudio">
-            <img src="../../../assets/images/logo-ispc.jpg" alt="Logo ISPC">
-            <div>
-                <h3>ISPC - INSTITUTO SUPERIOR POLITÉCNICO CORDOBA</h3>
-                <p>03-2022 - actualidad.</p>
-                <p>Tecnicatura en Desarrollo Web y Aplicaciones Digitales.</p> 
-            </div>
-        </div>
-        <div class="estudio">
-            <img src="../../../assets/images/arg-programa.png" alt="Logo Argentina Programa">
-            <div>
-                <h3>ARGENTINA PROGRAMA #YoProgramo</h3>
-                <p>02-2022 - 08-2022</p>
-                <p>Full Stack Jr.</p> 
-            </div>
-        </div>
-        <div class="estudio">
-            <img src="../../../assets/images/codo-a-codo-logo.png" alt="Logo Codo a Codo 4.0">
-            <div>
-                <h3>CODO A CODO 4.0</h3>
-                <p>03-2022 - 07-2022</p>
-                <p>Full Stack Python.</p> 
-            </div>
+    <h1>Estudios</h1>
+    <div class="estudio" *ngFor="let estudio of estudios">
+        <img [src]="estudio.img" alt="Logo">
+        <div>
+            <h3>{{estudio.institucion}}</h3>
+            <p>{{estudio.duracion}}</p>
+            <p>{{estudio.titulo}}</p> 
         </div>
     </div>
-    <img src="../../../assets/images/img-educacion.png" alt="Area de estudio">
 </div>

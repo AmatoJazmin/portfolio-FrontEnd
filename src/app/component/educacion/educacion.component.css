@@ -10,15 +10,13 @@ img {
 #educacion {
     display: flex;
     align-items: center;
-}
-
-img:last-child {
-    width: 300px;
-    margin-left: 100px;
+    justify-content: space-between;
+    background-color: #54BAB9;
+    color: white;
 }
 
 .estudio {
     display: flex;
     align-items: center;
-    margin: 30px;
+    padding: 50px 10px;
 }

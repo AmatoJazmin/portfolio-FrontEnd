@@ -1,50 +1,12 @@
-<div id="skills">
-    <div class="skill">
-        <img src="../../../assets/images/logo-git.png" alt="Logo Git">
-        <p>Git</p>
-    </div>
-    <div class="skill">
-        <img src="../../../assets/images/logo-github.png" alt="Logo GitHub">
-        <p>GitHub</p>
-    </div>
-    <div class="skill">
-        <img src="../../../assets/images/logo-html.png" alt="Logo HTML">
-        <p>HTML</p>
-    </div>
-    <div class="skill">
-        <img src="../../../assets/images/logo-css.png" alt="Logo CSS">
-        <p>CSS</p>
-    </div>
-    <div class="skill">
-        <img src="../../../assets/images/logo-javascript.png" alt="Logo JavaScript">
-        <p>JavaScript</p>
-    </div>
-    <div class="skill">
-        <img src="../../../assets/images/logo-typescript.png" alt="Logo TypeScript">
-        <p>TypeScript</p>
-    </div>
-    <div class="skill">
-        <img src="../../../assets/images/logo-angular.png" alt="Logo Angular">
-        <p>Angular</p>
-    </div>
-    <div class="skill">
-        <img src="../../../assets/images/logo-vuejs.png" alt="Logo Vue.js">
-        <p>Vue.js</p>
-    </div>
-    <div class="skill">
-        <img src="../../../assets/images/logo-mysql.png" alt="Logo MySQL">
-        <p>MySQL</p>
-    </div>
-    <div class="skill">
-        <img src="../../../assets/images/logo-java.png" alt="Logo Java">
-        <p>Java</p>
-    </div>
-    <div class="skill">
-        <img src="../../../assets/images/logo-springboot.png" alt="Logo Spring Boot">
-        <p>Spring Boot</p>
-    </div>
-    <div class="skill">
-        <img src="../../../assets/images/logo-python.png" alt="Logo Python">
-        <p>Python</p>
+<div id="componente">
+    <h2>Tecnologias</h2> 
+    <p id="agregar" *ngIf="editar"><i class="fa-solid fa-circle-plus"></i>Agregar tecnologia</p>
+    <div id="skills">
+        <div class="skill" *ngFor="let habilidad of habilidades">
+            <img [src]="habilidad.img" alt="Logo">
+            <p>{{habilidad.nombre}}</p>
+            <i class="fa-solid fa-pen-to-square" title="editar" *ngIf="editar"></i>
+            <i class="fa-sharp fa-solid fa-trash" title="eliminar" *ngIf="editar"></i>
+        </div>
     </div>
 </div>
