@@ -1,0 +1,6 @@
+form * {
+    display: inline;
+    margin: 10px;
+}
+
+p {width: 100%; text-align: center; color: #ff0000AA;}

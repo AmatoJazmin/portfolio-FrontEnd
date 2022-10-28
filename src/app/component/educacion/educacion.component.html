@@ -1,11 +1,16 @@
-<div id="educacion">
-    <h1>Estudios</h1>
-    <div class="estudio" *ngFor="let estudio of estudios">
-        <img [src]="estudio.img" alt="Logo">
-        <div>
-            <h3>{{estudio.institucion}}</h3>
-            <p>{{estudio.duracion}}</p>
-            <p>{{estudio.titulo}}</p> 
+<section>
+    <h2>Estudios  <i class="fa-solid fa-circle-plus fa-sm" title="agregar" (click)="agregar=!agregar"></i><i class="fa-solid fa-pen-to-square fa-sm" title="editar" (click)="editar=!editar"></i></h2>
+    <div id="estudios">
+        <div class="estudio" *ngFor="let estudio of estudios">
+            <img [src]="estudio.img" alt="Logo">
+            <div>
+                <h3>{{estudio.institucion}}</h3>
+                <p>{{estudio.duracion}}</p>
+                <p>{{estudio.titulo}}</p> 
+                <p *ngIf="editar">Id: {{estudio.id}}</p>
+                <i class="fa-sharp fa-solid fa-trash" title="eliminar" *ngIf="editar" (click)="eliminarEstudio(estudio.id)"></i>
+            </div>
         </div>
     </div>
-</div>
+</section>
+

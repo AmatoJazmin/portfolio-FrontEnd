@@ -6,6 +6,13 @@
     color: white;
 }
 
+header, footer {height: 10vh}
+
+section {
+    min-height: 80vh;
+    padding: 30px
+}
+
 h1 {font-family: 'Lato', sans-serif}
 
 h2 {
@@ -14,3 +21,16 @@ h2 {
 }
 
 p {font-size: 17px}
+
+button {
+    background-color:coral;
+    border-radius: 5px;
+    padding: 5px;
+    border-style: none;
+    font-size: 17px;
+}
+
+button:hover {
+    background-color: #54BAB9;
+    cursor: pointer;
+}

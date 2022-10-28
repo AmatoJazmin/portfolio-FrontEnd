@@ -1,0 +1,28 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-left: 100px;
+}
+
+h2 {
+    font-size: 50px;
+    color: white;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 20px auto;
+    width: 100%
+}
+
+h3 {
+    font-size: 40px;
+    color:#54BAB9;
+}
+
+i {
+    color:coral;
+    margin: auto 15px;
+    cursor: pointer
+}

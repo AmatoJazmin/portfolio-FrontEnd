@@ -1,21 +1,15 @@
-<div id="componente">
-    <div id="header">
-        <p><b>Argentina Programa <p>#YoProgramo</p></b></p>
-        <nav>
-            <ul>
-                <li>Inicio</li>
-                <li>Sobre mi</li>
-                <li>Educacion</li>
-                <li>Tecnologias</li>
-                <li>Proyectos</li>
-                <li>Contacto</li>
-                <li><button>Iniciar sesión</button></li>
-            </ul>
-        </nav>
-    </div>
-    <div id="body">
-        <h2>Mi portfolio</h2>
-        <h1>{{datos.nombre}}</h1>
-        <h3>{{datos.profesion}} <i class="fa-solid fa-pen-to-square" title="editar"></i></h3>
-    </div>
-</div>
+<header>
+    <p><b>Argentina Programa <p>#YoProgramo</p></b></p>
+    <nav>
+        <ul>
+            <li routerLink="/inicio" aria-current="page">Inicio</li>
+            <li routerLink="/sobre-mi" aria-current="page">Sobre mi</li>
+            <li routerLink="/estudios" aria-current="page">Educacion</li>
+            <li routerLink="/tecnologias" aria-current="page">Tecnologias</li>
+            <li routerLink="/proyectos" aria-current="page">Proyectos</li>
+            <li routerLink="/contacto" aria-current="page">Contacto</li>
+            <li><app-login></app-login></li>
+        </ul>
+    </nav>
+</header>
+

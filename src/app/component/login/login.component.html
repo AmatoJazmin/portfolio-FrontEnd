@@ -1,1 +1,9 @@
-<p>login works!</p>
+<button *ngIf="!editar" (click)="editar = true">Iniciar sesión</button>
+<form [formGroup]="form" *ngIf="editar" (ngSubmit)="login($event)">
+        <label for="email">Email:</label>
+        <input type="email" formControlName="email" id="email">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" formControlName="contrasena" id="contrasena">
+        <button type="submit">Ingresar</button>
+</form>
+<p *ngIf="loginError">usuario y/o contraseña incorrectos</p>

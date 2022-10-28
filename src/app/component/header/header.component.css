@@ -1,3 +1,10 @@
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:30px;
+}
+
 p p {
     display: inline;
     color: #54BAB9
@@ -13,49 +20,3 @@ li {
 
 li:hover {color: coral}
 
-button {
-    background-color:coral;
-    border-radius: 5px;
-    padding: 5px;
-    border-style: none;
-    font-size: 17px;
-}
-
-button:hover {
-    background-color: #54BAB9;
-    cursor: pointer;
-}
-
-h2 {
-    font-size: 50px;
-    color: white;
-}
-
-h1 {
-    font-size: 60px;
-    margin: 20px auto
-}
-
-h3 {
-    font-size: 40px;
-    color:#54BAB9
-}
-
-#header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding:30px;
-    height: 10vh;
-}
-
-#body {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    height: 90vh;
-    padding-left: 100px;
-}
-#body * {
-    width: 100%;
-}

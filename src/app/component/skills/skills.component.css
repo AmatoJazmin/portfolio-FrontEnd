@@ -1,17 +1,29 @@
 h2 {text-align: center;
-margin-bottom: 50px;}
+margin-bottom: 50px}
 
 p { margin: 10px}
 
-img { height: 80px;}
+img { height: 80px}
 
-i {margin: auto 10px}
+i {
+    margin: auto 10px;
+    color: coral;
+    cursor: pointer
+}
 
-#agregar {text-align: center;}
+form {
+    width: 80%;
+    margin: 30px auto}
 
-#componente {
-    height: 100vh;
-    margin: 30px
+form * {
+    margin: 10px auto;
+    text-align: center;
+    width: 100%
+}
+
+#agregar {
+    text-align: center;
+    color: coral
 }
 
 #skills {
@@ -19,7 +31,6 @@ i {margin: auto 10px}
     flex-wrap: wrap;
     align-content: flex-start;
     margin: auto;
-    height: 80vh;
     width: 80%;
 }
 

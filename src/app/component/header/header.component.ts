@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +7,9 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class HeaderComponent implements OnInit {
 
-  datos:any = [];
-
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.datosPortfolio.verDatos("datospersonales").subscribe(data => {this.datos = data[0]})
   }
 
 }

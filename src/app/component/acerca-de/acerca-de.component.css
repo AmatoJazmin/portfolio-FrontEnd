@@ -5,14 +5,8 @@ img { height: 50vh}
 
 p {width: 50%; line-height:25px;}
 
-#componente {
-    padding: 30px;
-    height: 100vh;
-}
-
 #sobre-mi {
     display: flex;
-    height: 90vh;
     align-items: center;
     justify-content: space-evenly;
 }

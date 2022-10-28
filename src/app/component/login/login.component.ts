@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  form:FormGroup;
+  loginError:Boolean = false;
+  editar: boolean =false;
+
+  constructor(private formBuilder:FormBuilder, private loginService:LoginService) {
+    this.form=this.formBuilder.group({
+      email:['',[Validators.required,Validators.email]],
+      contrasena:['',[Validators.required,Validators.minLength(8)]]
+    })
+  }
 
   ngOnInit(): void {
+    
+  }
+
+  login(event:Event){
+    event.preventDefault;
+    this.loginService.login(this.form.value).subscribe((response:Boolean)=>{
+      if(response) window.location.reload;
+      else this.loginError = true;
+    })
   }
 
 }

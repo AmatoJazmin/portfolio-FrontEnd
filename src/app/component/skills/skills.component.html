@@ -1,12 +1,35 @@
-<div id="componente">
-    <h2>Tecnologias</h2> 
-    <p id="agregar" *ngIf="editar"><i class="fa-solid fa-circle-plus"></i>Agregar tecnologia</p>
+<section>    <h2>Tecnologias  <i class="fa-solid fa-circle-plus fa-sm" title="agregar" (click)="agregar=!agregar" *ngIf="logueado"></i><i class="fa-solid fa-pen-to-square fa-sm" title="editar" (click)="editar=!editar" *ngIf="logueado"></i></h2> 
+    <form #formTecno="ngForm" (ngSubmit)="agregarTecnologia(formTecno)" *ngIf="agregar">
+        <div>
+            <label for="img">Url img:</label>
+            <input type="text" ngModel name="img" id="img">
+        </div>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" ngModel name="nombre" id="nombre">
+        </div>
+        <button>Agregar</button>
+    </form>
+    <form #formEdit="ngForm" (ngSubmit)="editarTecnologia(formEdit)" *ngIf="editar">
+        <div>
+            <label for="id">Id:</label>
+            <input type="number" ngModel name="id"  id="id" >
+            <label for="img">Url img:</label>
+            <input type="text" ngModel name="img" id="img">
+        </div>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" ngModel name="nombre" id="nombre">
+        </div>
+        <button>Editar</button>
+    </form>
     <div id="skills">
         <div class="skill" *ngFor="let habilidad of habilidades">
             <img [src]="habilidad.img" alt="Logo">
             <p>{{habilidad.nombre}}</p>
-            <i class="fa-solid fa-pen-to-square" title="editar" *ngIf="editar"></i>
-            <i class="fa-sharp fa-solid fa-trash" title="eliminar" *ngIf="editar"></i>
+            <p *ngIf="editar">Id: {{habilidad.id}}</p>
+            <i class="fa-sharp fa-solid fa-trash" title="eliminar" *ngIf="editar" (click)="eliminarTecnologia(habilidad.id)"></i>
         </div>
     </div>
-</div>
+</section>
+
