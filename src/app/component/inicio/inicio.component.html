@@ -1,6 +1,10 @@
 <section>
     <h2>Mi portfolio</h2>
-    <h1>{{datos.nombre}}</h1>
-    <h3>{{datos.profesion}} <i class="fa-solid fa-pen-to-square fa-sm" title="editar"></i></h3>
+    <h1>Fabiana Jazmin Amato</h1>
+    <h3>{{datos.profesion}} <i class="fa-solid fa-pen-to-square fa-sm" title="editar" (click)="editar=!editar" *ngIf="logueado"></i></h3>
+    <form #formEdit="ngForm" (ngSubmit)="editarDato(formEdit)" *ngIf="!editar">
+        <input type="text" ngModel name="dato"  id="dato" width="50%">
+        <button>Editar</button>
+    </form>
 </section>
 

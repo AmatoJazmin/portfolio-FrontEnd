@@ -1,4 +1,5 @@
-<button *ngIf="!editar" (click)="editar = true">Iniciar sesión</button>
+<button *ngIf="!editar && !logueado" (click)="editar = true">Iniciar sesión</button>
+<button *ngIf="logueado" (click)="logout()">Cerrar sesión</button>
 <form [formGroup]="form" *ngIf="editar" (ngSubmit)="login($event)">
         <label for="email">Email:</label>
         <input type="email" formControlName="email" id="email">

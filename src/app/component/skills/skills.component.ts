@@ -16,8 +16,6 @@ export class SkillsComponent implements OnInit {
   agregar:boolean = false;
   logueado:boolean = false;
 
-
-
   constructor(private datosPortfolio:PortfolioService, private login:LoginService) { }
 
   ngOnInit(): void {
@@ -33,7 +31,7 @@ export class SkillsComponent implements OnInit {
     this.datosPortfolio.agregarDatos(this.path,formTecno.value).subscribe({
     next: () => {
       this.verTecnologias();
-      formTecno.reset;
+      formTecno.reset();
     }
   })
   }
@@ -41,7 +39,8 @@ export class SkillsComponent implements OnInit {
   editarTecnologia(formEdit:NgForm):void{
     this.datosPortfolio.editarDatos(this.path,formEdit.value).subscribe({
       next: () => {
-        this.verTecnologias()
+        this.verTecnologias();
+        formEdit.reset();
       }
     })
   }

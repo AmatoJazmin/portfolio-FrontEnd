@@ -19,7 +19,7 @@
         </div>
         <div>
             <label for="nombre">Nombre:</label>
-            <input type="text" ngModel name="nombre" id="nombre">
+            <input type="text" ngModel name="nombre" id="nombre" value="Hola">
         </div>
         <button>Editar</button>
     </form>
@@ -28,7 +28,7 @@
             <img [src]="habilidad.img" alt="Logo">
             <p>{{habilidad.nombre}}</p>
             <p *ngIf="editar">Id: {{habilidad.id}}</p>
-            <i class="fa-sharp fa-solid fa-trash" title="eliminar" *ngIf="editar" (click)="eliminarTecnologia(habilidad.id)"></i>
+            <i class="fa-sharp fa-solid fa-trash" title="eliminar" (click)="eliminarTecnologia(habilidad.id)" *ngIf="logueado"></i>
         </div>
     </div>
 </section>

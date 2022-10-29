@@ -3,4 +3,6 @@ form * {
     margin: 10px;
 }
 
-p {width: 100%; text-align: center; color: #ff0000AA;}
+p {width: 100%; text-align: center}
+
+input {width: 200px}

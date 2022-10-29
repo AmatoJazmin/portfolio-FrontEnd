@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { SkillsComponent } from './component/skills/skills.component'; 
 
 @Component({
   selector: 'app-root',

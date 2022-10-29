@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   form:FormGroup;
   loginError:Boolean = false;
   editar: boolean =false;
+  logueado:boolean = false;
 
   constructor(private formBuilder:FormBuilder, private loginService:LoginService) {
     this.form=this.formBuilder.group({
@@ -21,15 +22,20 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    this.logueado = this.loginService.logueado();
   }
 
   login(event:Event){
     event.preventDefault;
     this.loginService.login(this.form.value).subscribe((response:Boolean)=>{
-      if(response) window.location.reload;
+      if(response) window.location.reload();
       else this.loginError = true;
     })
+  }
+
+  logout(){
+    this.loginService.logout();
+    window.location.reload();
   }
 
 }

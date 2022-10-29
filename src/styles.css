@@ -34,3 +34,10 @@ button:hover {
     background-color: #54BAB9;
     cursor: pointer;
 }
+
+input {
+    background-color: #fff5;
+    border-radius: 5px;
+}
+
+.active-link {color: coral}
