@@ -4,7 +4,7 @@ h2 {
 }
 
 i {
-    margin: auto 10px;
+    margin:10px;
     color: coral;
     cursor: pointer;
 }
@@ -16,18 +16,33 @@ img {
     margin-right: 30px;
 }
 
+form {
+    width: 50%;
+    margin: 30px auto}
+
+form * {
+    margin: 10px auto;
+    text-align: center;
+    width: 100%
+}
+
 #estudios {
     display: flex;
     justify-content: center;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
 }
-
 
 .estudio {
     display: flex;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
     border: 1px solid white;
     width: 50%;
-    margin: 10px;
+    margin: 10px auto;
+}
+
+.estudio:hover {
+    transform: scale(1.05,1.05);
+    border: 1px coral solid;
 }

@@ -1,10 +1,22 @@
 <section>
-    <h2>Sobre mi</h2>
+    <h2>Sobre mi  <i class="fa-solid fa-pen-to-square fa-sm" title="editar" (click)="editar=!editar" *ngIf="logueado"></i></h2>
     <div id="sobre-mi">
-        <img src="../../../assets/images/img-sobreMi.png" alt="Mujer trabajando">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum autem alias esse quam inventore quia cupiditate, quae vel adipisci ipsa dolorem reprehenderit voluptate magni quod magnam temporibus! Similique, est id.<br>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem consequatur placeat similique ipsum. Enim distinctio mollitia fugit excepturi laudantium dolores, sequi quia consequatur pariatur sunt est. Dolorum ullam vel vitae! <br>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur laboriosam ducimus facilis soluta impedit illo dignissimos doloremque repellat esse excepturi itaque molestias magnam in eius, accusamus alias quam omnis? Assumenda.</p> 
+        <div id="imagen">
+            <img [src]="datos.imagen" alt="Foto">
+        </div>
+        <div>
+            <p>{{datos.descripcion1}}</p>
+            <textarea name="descripcion1" id="descripcion1" [(ngModel)]="datos.descripcion1" *ngIf="editar"></textarea>
+            <p>{{datos.descripcion2}}</p>
+            <textarea name="descripcion2" id="descripcion2" [(ngModel)]="datos.descripcion2" *ngIf="editar"></textarea>
+            <p>{{datos.descripcion3}}</p>
+            <textarea name="descripcion3" id="descripcion3" [(ngModel)]="datos.descripcion3" *ngIf="editar"></textarea>
+            <div id="editImg" *ngIf="editar">
+                <label for="img">Imagen:</label>
+                <input type="text" [(ngModel)]="datos.imagen" id="img">
+            </div>
+            <button (click)="editarDatos()" *ngIf="editar">Editar</button>
+        </div>
     </div>
 </section>
     

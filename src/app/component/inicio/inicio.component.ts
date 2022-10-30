@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 import { LoginService } from 'src/app/services/login.service';
-import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-inicio',
@@ -26,11 +25,13 @@ export class InicioComponent implements OnInit {
     this.datosPortfolio.verDatos(this.path).subscribe(data => {this.datos = data[0]});
   }
 
-  editarDato(formEdit:NgForm):void{
-    this.datosPortfolio.editarDatos(this.path,formEdit.value).subscribe({
+  editarDato():void{
+    let edit = document.querySelector("input");
+    this.datos.profesion = edit?.value;
+    this.datosPortfolio.editarDatos(this.path,this.datos).subscribe({
       next: () => {
         this.verDatos();
-        formEdit.reset();
+        edit!.value = '';
       }
     })
   }

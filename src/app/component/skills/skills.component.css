@@ -3,8 +3,6 @@ margin-bottom: 50px}
 
 p { margin: 10px}
 
-img { height: 80px}
-
 i {
     margin: auto 10px;
     color: coral;
@@ -12,18 +10,13 @@ i {
 }
 
 form {
-    width: 80%;
+    width: 50%;
     margin: 30px auto}
 
 form * {
     margin: 10px auto;
     text-align: center;
     width: 100%
-}
-
-#agregar {
-    text-align: center;
-    color: coral
 }
 
 #skills {

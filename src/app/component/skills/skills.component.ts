@@ -10,11 +10,13 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class SkillsComponent implements OnInit {
 
-  path:String = "habilidades";
-  habilidades:any;
+  path:String = "tecnologias";
+  tecnologias:any;
   editar:boolean = false;
   agregar:boolean = false;
   logueado:boolean = false;
+  form:any;
+  formAgr:any;
 
   constructor(private datosPortfolio:PortfolioService, private login:LoginService) { }
 
@@ -24,14 +26,14 @@ export class SkillsComponent implements OnInit {
   }
 
   verTecnologias():any {
-    this.datosPortfolio.verDatos(this.path).subscribe(data =>{this.habilidades = data})
+    this.datosPortfolio.verDatos(this.path).subscribe(data =>{this.tecnologias = data})
   }
 
   agregarTecnologia (formTecno: NgForm):void{
     this.datosPortfolio.agregarDatos(this.path,formTecno.value).subscribe({
     next: () => {
       this.verTecnologias();
-      formTecno.reset();
+      this.agregar = false;
     }
   })
   }
@@ -40,7 +42,7 @@ export class SkillsComponent implements OnInit {
     this.datosPortfolio.editarDatos(this.path,formEdit.value).subscribe({
       next: () => {
         this.verTecnologias();
-        formEdit.reset();
+        this.editar = false;
       }
     })
   }
@@ -49,6 +51,8 @@ export class SkillsComponent implements OnInit {
     this.datosPortfolio.eliminarDatos(this.path,JSON.stringify(tecno)).subscribe({
       next: () => {
         this.verTecnologias()
+        this.agregar = false;
+        this.editar = false;
       }
     })
   }

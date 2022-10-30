@@ -21,7 +21,6 @@ export class PortfolioService {
     return this.http.put<any>(`${this.api}/${path}/editar`,datos)};
 
   eliminarDatos(path:String,datos:any):Observable<any>{
-    console.log(datos);
     return this.http.delete<any>(`${this.api}/${path}/eliminar/`+ datos,{
       headers: new HttpHeaders({'Content-Type': 'application/json'})})};
 

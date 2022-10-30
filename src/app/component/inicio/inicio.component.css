@@ -19,7 +19,8 @@ h1 {
 h3 {
     font-size: 40px;
     color:#54BAB9;
-    width: 100%
+    width: 100%;
+    margin:20px auto
 }
 
 i {
@@ -28,12 +29,9 @@ i {
     cursor: pointer
 }
 
-form {margin: 20px 0}
-
-form * {margin: 10px}
-
 input { 
     width: 340px;
     height: 30px;
     font-size: 20px
 }
+button {margin-left: 20px}

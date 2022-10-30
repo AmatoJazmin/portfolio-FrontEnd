@@ -1,14 +1,56 @@
 <section>
-    <h2>Estudios  <i class="fa-solid fa-circle-plus fa-sm" title="agregar" (click)="agregar=!agregar"></i><i class="fa-solid fa-pen-to-square fa-sm" title="editar" (click)="editar=!editar"></i></h2>
+    <h2>Estudios  <i class="fa-solid fa-circle-plus fa-sm" title="agregar" (click)="agregar=!agregar" (click)="editar = false" *ngIf="logueado"></i></h2>
+    <form #formAgr="ngForm" (ngSubmit)="agregarEstudio(formAgr)" *ngIf="agregar">
+        <div>
+            <label for="img">Url imagen:</label>
+            <input type="text" ngModel name="img" id="img">
+            <label for="url">Url web:</label>
+            <input type="text" ngModel name="url" id="url">
+            <label for="institucion">Institucion:</label>
+            <input type="text" ngModel name="institucion" id="institucion">
+            <label for="duracion">Duracion:</label>
+            <input type="text" ngModel name="duracion" id="duracion">
+            <label for="titulo">Titulo:</label>
+            <input type="text" ngModel name="titulo" id="titulo">
+            <label for="tecnologias">Tecnologias:</label>
+            <input type="text" ngModel name="tecnologias" id="tecnologias">
+            <label for="descripcion">Descripcion:</label>
+            <input type="text" ngModel name="descripcion" id="descripcion">
+        </div>
+        <button>Agregar</button>
+    </form>
+    <form #formEdit="ngForm" (ngSubmit)="editarEstudio(formEdit)" *ngIf="editar">
+        <div>
+            <label for="id">Id:</label>
+            <input type="number" [ngModel]="form.id" name="id" id="id" readonly>
+            <label for="img">Url imagen:</label>
+            <input type="text" [(ngModel)]="form.img" name="img" id="img">
+            <label for="url">Url web:</label>
+            <input type="text" [ngModel]="form.url" name="url" id="url">
+            <label for="institucion">Institucion:</label>
+            <input type="text" [(ngModel)]="form.institucion" name="institucion" id="institucion">
+            <label for="duracion">Duracion:</label>
+            <input type="text" [(ngModel)]="form.duracion" name="duracion" id="duracion">
+            <label for="titulo">Titulo:</label>
+            <input type="text" [(ngModel)]="form.titulo" name="titulo" id="titulo">
+            <label for="tecnologias">Tecnologias:</label>
+            <input type="text" [(ngModel)]="form.tecnologias" name="tecnologias" id="tecnologias">
+            <label for="descripcion">Descripcion:</label>
+            <input type="text" [(ngModel)]="form.descripcion" name="descripcion" id="descripcion">
+        </div>
+        <button>Editar</button>
+    </form>
     <div id="estudios">
         <div class="estudio" *ngFor="let estudio of estudios">
-            <img [src]="estudio.img" alt="Logo">
+            <a [href]="estudio.url" [title]="estudio.url" target="_blank"><img [src]="estudio.img" alt="Logo"></a>
             <div>
                 <h3>{{estudio.institucion}}</h3>
                 <p>{{estudio.duracion}}</p>
                 <p>{{estudio.titulo}}</p> 
-                <p *ngIf="editar">Id: {{estudio.id}}</p>
-                <i class="fa-sharp fa-solid fa-trash" title="eliminar" *ngIf="editar" (click)="eliminarEstudio(estudio.id)"></i>
+                <p>{{estudio.tecnologias}}</p> 
+                <p>{{estudio.descripcion}}</p> 
+                <i class="fa-sharp fa-solid fa-trash" title="eliminar" (click)="eliminarEstudio(estudio.id)" *ngIf="logueado"></i>
+                <i class="fa-solid fa-pen-to-square" title="editar" (click)="editar=true" (click)="form = estudio" (click)="agregar = false" *ngIf="logueado"></i>
             </div>
         </div>
     </div>
