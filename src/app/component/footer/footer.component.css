@@ -2,9 +2,18 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation-name: entrada;
+    animation-duration: 4s;
+    position: relative
 }
 
-footer * {margin: 20px;}
+footer * {margin: 20px}
 
 i:hover {color: coral}
+
+@keyframes entrada {
+    0%   {left:-100vw}
+    100% {left:0px}
+}
+
 

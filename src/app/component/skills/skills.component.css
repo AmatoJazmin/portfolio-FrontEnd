@@ -39,3 +39,11 @@ form * {
     transform: scale(1.05,1.05);
     border: 1px coral solid;
 }
+
+@media only screen and (max-width: 920px) {
+    form {width:75%}
+}
+
+@media only screen and (max-width: 600px) {
+    form {width:100%}
+}

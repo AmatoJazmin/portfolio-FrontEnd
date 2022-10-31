@@ -2,7 +2,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    padding-left: 100px;
+    padding: 0 100px
 }
 
 h2 {
@@ -23,6 +23,12 @@ h3 {
     margin:20px auto
 }
 
+h1, h2, h3 {
+    animation-name: entrada;
+    animation-duration: 3s;
+    position: relative;
+}
+
 i {
     color:coral;
     margin: auto 15px;
@@ -35,3 +41,21 @@ input {
     font-size: 20px
 }
 button {margin-left: 20px}
+
+@keyframes entrada {
+    0%   {left:-100vw}
+    100% {left:0px}
+}
+
+@media only screen and (max-width: 900px) {
+    section {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 635px) {
+    h1, h2, h3 {
+        font-size: 30px; 
+        margin: 15px
+    } 
+}

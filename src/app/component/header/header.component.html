@@ -1,15 +1,28 @@
 <header>
     <p><b>Argentina Programa <p>#YoProgramo</p></b></p>
-    <nav>
+    <nav id="menu">
         <ul>
             <li routerLink="/inicio" ariaCurrentWhenActive="page"  routerLinkActive="active-link">Inicio</li>
             <li routerLink="/sobre-mi" ariaCurrentWhenActive="page"  routerLinkActive="active-link">Sobre mi</li>
             <li routerLink="/estudios"ariaCurrentWhenActive="page"  routerLinkActive="active-link">Educacion</li>
             <li routerLink="/tecnologias" ariaCurrentWhenActive="page"  routerLinkActive="active-link">Tecnologias</li>
             <li routerLink="/proyectos" ariaCurrentWhenActive="page"  routerLinkActive="active-link">Proyectos</li>
-            <li routerLink="/contacto" ariaCurrentWhenActive="page"  routerLinkActive="active-link">Contacto</li>
             <li><app-login></app-login></li>
         </ul>
     </nav>
+    <nav id="menuDesplegable">
+        <app-login></app-login>
+
+            <i class="fa-solid fa-bars  fa-2xl" (click)="desplegar = !desplegar"></i>
+     
+        <ul *ngIf="desplegar">
+            <li routerLink="/inicio" ariaCurrentWhenActive="page"  routerLinkActive="active-link">Inicio</li>
+            <li routerLink="/sobre-mi" ariaCurrentWhenActive="page"  routerLinkActive="active-link">Sobre mi</li>
+            <li routerLink="/estudios"ariaCurrentWhenActive="page"  routerLinkActive="active-link">Educacion</li>
+            <li routerLink="/tecnologias" ariaCurrentWhenActive="page"  routerLinkActive="active-link">Tecnologias</li>
+            <li routerLink="/proyectos" ariaCurrentWhenActive="page"  routerLinkActive="active-link">Proyectos</li>
+        </ul>
+
+    </nav> 
 </header>
 

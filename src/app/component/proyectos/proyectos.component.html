@@ -1,3 +1,61 @@
 <section>
-    
+    <h2>Proyectos  <i class="fa-solid fa-circle-plus fa-sm" title="agregar" (click)="agregar=!agregar" (click)="editar = false" *ngIf="logueado"></i></h2>
+    <form #formAgr="ngForm" (ngSubmit)="agregarProyecto(formAgr)" *ngIf="agregar">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" ngModel name="nombre" id="nombre">
+            <label for="url">Url web:</label>
+            <input type="text" ngModel name="url" id="url">
+            <label for="img">Url imagen:</label>
+            <input type="text" ngModel name="img" id="img">
+            <label for="gitHub">GitHub:</label>
+            <input type="text" ngModel name="gitHub" id="gitHub">
+            <label for="tecnologias">Tecnologias:</label>
+            <input type="text" ngModel name="tecnologias" id="tecnologias">
+            <label for="descripcion">Descripcion:</label>
+            <input type="text" ngModel name="descripcion" id="descripcion">
+        </div>
+        <button>Agregar</button>
+    </form>
+    <form #formEdit="ngForm" (ngSubmit)="editarProyecto(formEdit)" *ngIf="editar">
+        <div>
+            <label for="id">Id:</label>
+            <input type="number" [ngModel]="form.id" name="id" id="id" readonly>
+            <label for="nombre">Nombre:</label>
+            <input type="text" [(ngModel)]="form.nombre" name="nombre" id="nombre" >
+            <label for="url">Url web:</label>
+            <input type="text" [ngModel]="form.url" name="url" id="url">
+            <label for="img">Url imagen:</label>
+            <input type="text" [(ngModel)]="form.img" name="img" id="img">
+            <label for="gitHub">GitHub:</label>
+            <input type="text" [ngModel]="form.gitHub" name="gitHub" id="gitHub">
+            <label for="tecnologias">Tecnologias:</label>
+            <input type="text" [(ngModel)]="form.tecnologias" name="tecnologias" id="tecnologias">
+            <label for="descripcion">Descripcion:</label>
+            <textarea type="text" [(ngModel)]="form.descripcion" name="descripcion" id="descripcion"></textarea>
+        </div>
+        <button>Editar</button>
+    </form>
+    <div id="proyectos">
+        <div class="proyecto" >
+            <img src="../../../assets/images/proy-portfolio.png" alt="Web" routerLink="/inicio">
+            <h3>Portfolio Web</h3> <br>
+            <p><b>Front-end:</b> Angular</p>
+            <a href="https://github.com/AmatoJazmin/portfolio-FrontEnd" target="_blank" title="https://github.com/AmatoJazmin/portfolio-FrontEnd">Repositorio  <i class="fa-brands fa-github fa-xl"></i></a> <br>
+            <p><b>Back-end:</b> Spring Boot</p>
+            <a href="https://github.com/AmatoJazmin/portfolio-BackEnd" target="_blank" title="https://github.com/AmatoJazmin/portfolio-BackEnd">Repositorio  <i class="fa-brands fa-github fa-xl"></i></a>
+        </div>
+        <div class="proyecto" *ngFor="let proyecto of proyectos">
+            <a [href]="proyecto.url" [title]="proyecto.url" target="_blank"><img [src]="proyecto.img" alt="Web"></a>
+            <h3>{{proyecto.nombre}}</h3>
+            <p>{{proyecto.tecnologias}}</p>
+            <p>{{proyecto.descripcion}}</p> 
+            <a [href]="proyecto.gitHub" target="_blank" [title]="proyecto.gitHub">Repositorio  <i class="fa-brands fa-github fa-xl"></i></a>
+            <div>
+                <i class="fa-sharp fa-solid fa-trash" title="eliminar" (click)="eliminarProyecto(proyecto.id)" *ngIf="logueado"></i>
+                <i class="fa-solid fa-pen-to-square" title="editar" (click)="editar=true" (click)="form = proyecto" (click)="agregar = false" *ngIf="logueado"></i>
+            </div>
+        </div>
+    </div>
 </section>
+

@@ -1,0 +1,62 @@
+h2 {
+    text-align: center;
+    margin-bottom: 50px
+}
+
+img {width: 100%}
+
+div > img {
+    border: 1px solid white;
+    cursor: pointer
+}
+
+a {display: block}
+
+div > i, h2 i {
+    margin:10px;
+    color: coral;
+    cursor: pointer;
+}
+
+form {
+    width: 50%;
+    margin: 30px auto}
+
+form * {
+    margin: 10px auto;
+    text-align: center;
+    width: 100%
+}
+
+#proyectos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 60vh;
+}
+
+.proyecto {
+    padding: 20px;
+    border: 1px solid white;
+    width: 300px;
+    margin: 10px;
+    text-align: center
+}
+
+.proyecto p {text-align:left; height: auto;}
+
+
+.proyecto:hover {
+    transform: scale(1.05,1.05);
+    border: 1px coral solid;
+}
+
+.proyecto * {margin-bottom: 10px}
+
+@media only screen and (max-width: 920px) {
+    form {width:75%}
+}
+
+@media only screen and (max-width: 600px) {
+    form {width:100%}
+}

@@ -1,8 +1,19 @@
+form {
+    text-align: center;
+    width: 300px;
+    margin: 10px auto;
+}
+
 form * {
-    display: inline;
     margin: 10px;
 }
 
-p {width: 100%; text-align: center}
+label {display: inline}
 
-input {width: 200px}
+p {
+    
+    text-align: center
+}
+
+input {width: 100%}
+  

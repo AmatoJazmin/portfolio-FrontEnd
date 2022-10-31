@@ -37,7 +37,6 @@ export class EducacionComponent implements OnInit {
   }
 
   editarEstudio(formEdit:NgForm):void{
-    console.log(this.form)
     this.datosPortfolio.editarDatos(this.path,formEdit.value).subscribe({
       next: () => {
         this.verEstudios()

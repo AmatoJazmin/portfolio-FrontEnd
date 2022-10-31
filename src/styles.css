@@ -22,6 +22,8 @@ h2 {
 
 p {font-size: 17px}
 
+a {text-decoration: none}
+
 button {
     background-color:coral;
     border-radius: 5px;

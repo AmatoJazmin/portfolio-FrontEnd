@@ -12,10 +12,6 @@
             <input type="text" ngModel name="duracion" id="duracion">
             <label for="titulo">Titulo:</label>
             <input type="text" ngModel name="titulo" id="titulo">
-            <label for="tecnologias">Tecnologias:</label>
-            <input type="text" ngModel name="tecnologias" id="tecnologias">
-            <label for="descripcion">Descripcion:</label>
-            <input type="text" ngModel name="descripcion" id="descripcion">
         </div>
         <button>Agregar</button>
     </form>
@@ -33,16 +29,12 @@
             <input type="text" [(ngModel)]="form.duracion" name="duracion" id="duracion">
             <label for="titulo">Titulo:</label>
             <input type="text" [(ngModel)]="form.titulo" name="titulo" id="titulo">
-            <label for="tecnologias">Tecnologias:</label>
-            <input type="text" [(ngModel)]="form.tecnologias" name="tecnologias" id="tecnologias">
-            <label for="descripcion">Descripcion:</label>
-            <input type="text" [(ngModel)]="form.descripcion" name="descripcion" id="descripcion">
         </div>
         <button>Editar</button>
     </form>
     <div id="estudios">
         <div class="estudio" *ngFor="let estudio of estudios">
-            <a [href]="estudio.url" [title]="estudio.url" target="_blank"><img [src]="estudio.img" alt="Logo"></a>
+            <a [href]="estudio.url" [title]="estudio.url" target="_blank"><img [src]="estudio.img" alt="Institucion"></a>
             <div>
                 <h3>{{estudio.institucion}}</h3>
                 <p>{{estudio.duracion}}</p>

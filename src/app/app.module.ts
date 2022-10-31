@@ -11,7 +11,6 @@ import { HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './component/login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { InicioComponent } from './component/inicio/inicio.component';
-import { ContactoComponent } from './component/contacto/contacto.component';
 import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
@@ -24,7 +23,6 @@ import { FooterComponent } from './component/footer/footer.component';
     ProyectosComponent,
     LoginComponent,
     InicioComponent,
-    ContactoComponent,
     FooterComponent,
   ],
   imports: [

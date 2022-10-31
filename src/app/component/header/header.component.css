@@ -3,6 +3,9 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     padding:30px;
+    animation-name: entrada;
+    animation-duration: 4s;
+    position: relative
 }
 
 p p {
@@ -10,13 +13,62 @@ p p {
     color: #54BAB9
 }
 
-ul {list-style-type: none}
+ul {list-style-type: none;
+    padding-inline-start: 0}
 
-li {
+li:hover {color: coral}
+
+#menu, #menuDesplegable {    
+    background-color:darkslategray;
+    z-index: 10
+}
+
+#menu li {
     display: inline;
-    margin: 10px;
+    margin-right: 10px;
     cursor: pointer;
 }
 
-li:hover {color: coral}
+#menuDesplegable {display: none}
+
+#menuDesplegable p {display: inline}
+
+#menuDesplegable li {text-align: right;}
+
+#menuDesplegable * {margin: 10px}
+
+#menuDesplegable i, li {cursor: pointer}
+
+#menuDesplegable i:hover {color: coral}
+
+@keyframes entrada {
+    0%   {left:-100vw}
+    100% {left:0px}
+}
+
+@media only screen and (max-width: 920px) {
+    #menu {display: none}
+    #menuDesplegable {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 635px) {
+    header {
+        display:block;
+        text-align: center;
+        height: auto;
+        padding-bottom: 0;
+    }
+    #menuDesplegable * {
+        display: block;
+    }
+    app-login, i {
+        padding-bottom: 20px;
+    }
+    #menuDesplegable li {text-align: center}
+
+}
+
+
 

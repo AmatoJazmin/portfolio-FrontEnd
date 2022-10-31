@@ -41,3 +41,8 @@ button {margin: 20px; width: 100%;}
     justify-content: center;
     width: 100%
 }
+
+@media only screen and (max-width: 920px) {
+    #imagen {display: none}
+    #sobre-mi {padding: 40px}
+}

@@ -9,7 +9,7 @@ i {
     cursor: pointer;
 }
 
-p { font-style:italic ;}
+p { font-style:italic}
 
 img {
     width: 100px;
@@ -38,11 +38,24 @@ form * {
     align-items: center;
     padding: 20px;
     border: 1px solid white;
-    width: 50%;
+    min-width: 50%;
     margin: 10px auto;
 }
 
 .estudio:hover {
     transform: scale(1.05,1.05);
     border: 1px coral solid;
+}
+
+@media only screen and (max-width: 920px) {
+    form {width:75%}
+    .estudio {
+        width: 80%;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    form {width:100%}
+    .estudio {width: 100%}
 }
