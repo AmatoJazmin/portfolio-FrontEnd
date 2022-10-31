@@ -12,7 +12,7 @@ interface login {
 })
 export class LoginService {
 
-  url = "http://localhost:8080";
+  url = "https://portfolio1argprog.herokuapp.com";
 
   constructor(private http:HttpClient) {
    }
